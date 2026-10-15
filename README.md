@@ -45,7 +45,17 @@ Oyama_Mahiro-Skill/
 
 ## 使用教程
 
-### 方法一：直接使用 Skill 成品（推荐）
+### 方法一：使用Releases打包成品
+
+1. **下载Releases版本**：进入本仓库[Releases](https://github.com/shifengshua/oyama_mahiro-skill/releases)页面，选择最新发行版下载
+   > 通常为 `.zip` 或 `.skill` 后缀
+
+2. **导入 AI 平台**：将下载的 Skill 压缩包直接上传导入任意支持 Skill 的 AI 聊天平台即可使用
+
+3. **开始对话**：在支持 Skill 的 AI 中激活后，输入 `/Mahiro_chat [你的问题]` 即可与「绪山真寻」对话
+   > 输入 `/Mahiro-perspective` 同样可激活
+
+### 方法二：使用仓库 Skill 成品
 
 1. **下载项目**：下载 `main` 分支的压缩包，或将仓库克隆到本地
 
@@ -55,7 +65,7 @@ Oyama_Mahiro-Skill/
 3. **导入 AI 平台**：将解压目录中的整个 `Mahiro-skill` 文件夹拖入任意支持 Skill 的 AI 聊天平台即可使用
    > 部分 AI 可能需要将解压出的 `Mahiro-skill` 文件夹单独压缩成一个压缩包才能上传导入
 
-4. **开始对话**：在支持该 Skill 的 AI 中激活后，输入 `/Mahiro_chat [你的问题]` 即可与「绪山真寻」对话
+4. **开始对话**：与 `方法一` 同样
 
 ### 方法二：使用原始 Markdown 文档
 
@@ -71,10 +81,17 @@ Oyama_Mahiro-Skill/
 本 Skill 的制作使用了以下工具与开源项目：
 
 | 工具/项目 | 用途 |
-|---|---|
-| [Kimi](https://www.kimi.com) | 数据收集及整理，生成 `Initial-Markdown` 下的原始 Markdown 文档 |
-| [GalgameCharacterSkills](https://github.com/JodieRuth/GalgameCharacterSkills) | 提供图形化操作界面，将 Markdown 文档处理转换为 Skill 成品 |
+|-----------|------|
+| [Kimi 网页客户端](https://www.kimi.com) | 数据收集及整理，生成 `Initial-Markdown` 下的原始 Markdown 文档 |
+| [GalgameCharacterSkills](https://github.com/JodieRuth/GalgameCharacterSkills) | 提供图形化操作界面，通过后端调用 API 将 Markdown 文档处理转换为 Skill 成品 |
 | [Qwen3.5-9B](https://www.modelscope.cn/models/unsloth/Qwen3.5-9B-GGUF)（本地 AI 模型） | 通过 API 调用生成 Skill 成品的核心内容 |
+
+## 数据源
+
+| 目录/文件/路径 | 原数据来源 | 处理工具 |
+|-----------|-----------|----------|
+| Initial-Markdown/... | 《お兄ちゃんはおしまい！》漫画与动画，以及AI模型训练参数数据 | [Kimi 网页客户端](https://www.kimi.com) + 手动修正 |
+| Mahiro-skill/... | Initial-Markdown/... （本仓库目录下文件） | [GalgameCharacterSkills](https://github.com/JodieRuth/GalgameCharacterSkills) + [Qwen3.5-9B](https://www.modelscope.cn/models/unsloth/Qwen3.5-9B-GGUF)（本地 AI 模型） + 手动修正 |
 
 ## 注意事项
 
@@ -96,14 +113,23 @@ Oyama_Mahiro-Skill/
 
 ## 联系与反馈
 
+- **GitHub Issues**：[Issues](https://github.com/shifengshua/oyama_mahiro-skill/issues)
 - **QQ**：3593853319
 - **邮箱**：shifengshua@outlook.com
 
 ## 声明
 
-- 本项目**完全免费**，禁止任何倒卖行为
+- 本项目**完全免费**，禁止任何直接倒卖源码行为
 - 本项目禁止用于任何违法行为
 - 本仓库不承担因使用本项目而引发的任何风险或责任
+
+## 版权声明
+
+- 该项目中所用到的剧情内容和角色设定等内容的版权，均归属于 《お兄ちゃんはおしまい！》官方、猫豆腐 所有
+- 通过AI使用该项目所产出的内容，其生成内容的版权归用户所有（除本身就是侵权内容的情况外）
+   > 根据《人工智能生成内容的著作权认定与有限保护》而定
+- 禁止将本项目源码直接用于倒卖等商业行为，使用Skill最终由AI产出的内容则不受此条商业行为的管控
+- 本项目使用“MIT”开源协议，但项目源码本身禁止直接用于商业。仅使用AI搭配本项目所产出内容的版权归用户所有的情况下，产出内容可用于商业目的
 
 ## 许可
 
